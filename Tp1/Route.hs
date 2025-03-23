@@ -17,7 +17,7 @@ newR cities
 -- | Indica si la primera ciudad consultada está antes que la segunda ciudad en la ruta
 inOrderR :: Route -> String -> String -> Bool
 inOrderR route city1 city2
-    | not (inRouteR route city1 && inRouteR route city2) = error "City not in route"
+    | not (inRouteR route city1 && inRouteR route city2) = False
     | otherwise = isBefore cities city1 city2
       where
         Rou cities = route

@@ -27,12 +27,12 @@ loadT truck palet
     | otherwise = loadedTruck
       where
         Tru stacks route = truck
-        loadedTruck = Tru (loadPalet stacks palet route) route
-        loadPalet :: [Stack] -> Palet -> Route -> [Stack]
-        loadPalet [] _ _ = []
-        loadPalet (stack : stacks) palet route
+        loadedTruck = Tru (stackPalet stacks palet route) route
+        stackPalet :: [Stack] -> Palet -> Route -> [Stack]
+        stackPalet [] _ _ = []
+        stackPalet (stack : stacks) palet route
             | holdsS stack palet route = stackS stack palet : stacks
-            | otherwise = stack : loadPalet stacks palet route
+            | otherwise = stack : stackPalet stacks palet route
 
 -- | Responde un camión al que se le han descargado los palets que podían descargarse en la ciudad
 unloadT :: Truck -> String -> Truck

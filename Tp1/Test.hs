@@ -80,7 +80,7 @@ t = [
     inOrderR routeABCD a b,
     not (inOrderR routeABCD b a),
     inOrderR routeABCD b b, 
-    testF (inOrderR routeD b c),
+    not (inOrderR routeABCD d e), -- False if either city not in route
     inRouteR routeABCD a,
     not (inRouteR routeABCD e),
 
