@@ -35,6 +35,7 @@ data Route = Rou [ String ] deriving (Eq, Show)
 
 newR :: [ String ] -> Route                    -- construye una ruta segun una lista de ciudades
 inOrderR :: Route -> String -> String -> Bool  -- indica si la primer ciudad consultada esta antes que la segunda ciudad en la ruta
+inRouteR :: Route -> String -> Bool            -- indica si la ciudad consultada está en la ruta
 
 ------------------------
 module Stack ( Stack, newS, freeCellsS, stackS, netS, holdsS, popS )
