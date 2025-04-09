@@ -3,7 +3,6 @@ module Stack (Stack, newS, freeCellsS, stackS, netS, holdsS, popS)
 
 import Palet
 import Route
-import Foreign (new, free)
 
 data Stack = Sta [Palet] Int deriving (Eq, Show)
 
