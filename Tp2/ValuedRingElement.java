@@ -19,9 +19,9 @@ class ValuedRingElement extends RingElement {
 
     ValuedRingElement addOther(ValuedRingElement other) {
         other.next = this;
-        other.previous = this.previous;
-        this.previous.next = other;
-        this.previous = other;
+        other.previous = previous;
+        previous.next = other;
+        previous = other;
         return other;
     }
 
@@ -30,8 +30,8 @@ class ValuedRingElement extends RingElement {
     }
 
     RingElement removeSelf() {
-        this.previous.next = this.next;
-        this.next.previous = this.previous;
-        return this.next;
+        previous.next = next;
+        next.previous = previous;
+        return next;
     }
 }
