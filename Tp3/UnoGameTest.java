@@ -79,7 +79,7 @@ class UnoGameTest {
         );
         assertDoesNotThrow(() -> game.playCard(Mark, NumberedRed(1)), UnoGame.CardNotPlayable);
         assertDoesNotThrow(() -> game.playCard(Segu, SkipRed()), UnoGame.CardNotPlayable);
-        assertDoesNotThrow(() -> game.playCard(Segu, Wild()), UnoGame.CardNotPlayable);
+        assertDoesNotThrow(() -> game.playCard(Segu, Wild().asBlue()), UnoGame.CardNotPlayable);
     }
 
     @Test public void testNoCalledUno() {
