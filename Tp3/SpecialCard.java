@@ -1,6 +1,6 @@
 package uno;
 
-class SpecialCard extends Card {
+abstract class SpecialCard extends Card {
     public SpecialCard(String color) { this.color = color; }
 
     public boolean equals(Object other) {
